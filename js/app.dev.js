@@ -1,27 +1,8 @@
 "use strict";
 
-var _createClass = function() {
-    function defineProperties(target, props) {
-        for (var i = 0; i < props.length; i++) {
-            var descriptor = props[i];
-            descriptor.enumerable = descriptor.enumerable || false;
-            descriptor.configurable = true;
-            if ("value" in descriptor) descriptor.writable = true;
-            Object.defineProperty(target, descriptor.key, descriptor);
-        }
-    }
-    return function(Constructor, protoProps, staticProps) {
-        if (protoProps) defineProperties(Constructor.prototype, protoProps);
-        if (staticProps) defineProperties(Constructor, staticProps);
-        return Constructor;
-    };
-}();
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
-function _classCallCheck(instance, Constructor) {
-    if (!(instance instanceof Constructor)) {
-        throw new TypeError("Cannot call a class as a function");
-    }
-}
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
 /* global bowser */
 /* global $ */
@@ -263,7 +244,7 @@ function createGui() {
 }
 
 function createApp() {
-    PIXI.loader.add(assets.star).add(assets.sky).add(assets.skylight).add(assets.rock).add(assets.nebula).add(assets.moonlight).add(assets.moon).add(assets.moon2).add(assets.hill).add(assets.cloud).add(assets.man).add(assets.bgm).load(function(loader, resources) {
+    PIXI.loader.add(assets.star).add(assets.sky).add(assets.skylight).add(assets.rock).add(assets.nebula).add(assets.moonlight).add(assets.moon).add(assets.moon2).add(assets.hill).add(assets.cloud).add(assets.man).add(assets.bgm).load(function (loader, resources) {
         earth = new Earth();
         board = new Board();
         eclipse = new Eclipse();
@@ -281,7 +262,7 @@ function createApp() {
         }
     });
 
-    PIXI.loader.onProgress.add(function(e) {
+    PIXI.loader.onProgress.add(function (e) {
         loading.update(~~e.progress);
     });
 }
@@ -320,7 +301,7 @@ function checkFps() {
     var averFps = 0;
     var count = 0;
 
-    var timer = setInterval(function() {
+    var timer = setInterval(function () {
         if (typeof earth.fps !== 'undefined') {
             if (averFps === 0) {
                 averFps = earth.fps;
@@ -342,7 +323,7 @@ function checkFps() {
 }
 
 function initShare() {
-    $('#pinterest').on('click', function(e) {
+    $('#pinterest').on('click', function (e) {
         e.preventDefault();
         var url = "http://pinterest.com/pin/create/button/?url=http%3A%2F%2Fkelvinh.studio&media=http%3A%2F%2Fkelvinh.studio%2Fimages%2Fcapture_1024.jpg&description=Kelvin%20Hung's%20portfolio";
         var setting = 'toolbar=no, location=no, status=no, menubar=no, scrollbars=yes, resizable=yes, width=800, height=680';
@@ -351,7 +332,7 @@ function initShare() {
     });
 }
 
-var Eclipse = function() {
+var Eclipse = function () {
     function Eclipse() {
         _classCallCheck(this, Eclipse);
 
@@ -372,7 +353,7 @@ var Eclipse = function() {
                 earth.headSprites.reverse();
             }
             earth.head.play();
-            earth.head.onComplete = function() {};
+            earth.head.onComplete = function () {};
 
             earth.cloud_top1.renderable = true;
             earth.cloud_top2.renderable = true;
@@ -425,10 +406,10 @@ var Eclipse = function() {
                 earth.headSprites.reverse();
             }
             earth.head.gotoAndPlay(0);
-            earth.head.onComplete = function() {
+            earth.head.onComplete = function () {
                 earth.headSprites.reverse();
                 earth.head.gotoAndStop(0);
-                earth.head.onComplete = function() {};
+                earth.head.onComplete = function () {};
             };
 
             this.tweens.push(TweenMax.to([earth.cloud_top1, earth.cloud_down1], 1.2, {
@@ -488,7 +469,7 @@ var Eclipse = function() {
     return Eclipse;
 }();
 
-var Loading = function() {
+var Loading = function () {
     function Loading() {
         _classCallCheck(this, Loading);
 
@@ -531,7 +512,7 @@ var Loading = function() {
         value: function listenEvent() {
             var _this = this;
 
-            PubSub.subscribe('resize', function(msg, data) {
+            PubSub.subscribe('resize', function (msg, data) {
                 _this.$loading.css({
                     transform: data.css
                 });
@@ -542,7 +523,7 @@ var Loading = function() {
     return Loading;
 }();
 
-var Earth = function() {
+var Earth = function () {
     function Earth() {
         _classCallCheck(this, Earth);
 
@@ -650,7 +631,7 @@ var Earth = function() {
             this.cloud_down2.filters = [];
             this.fs.addChild(this.cloud_down2);
 
-            setTimeout(function() {
+            setTimeout(function () {
                 earth.cloud_top1.renderable = false;
                 earth.cloud_top2.renderable = false;
                 earth.cloud_down1.renderable = false;
@@ -718,23 +699,23 @@ var Earth = function() {
             this.moonCtrl.buttonMode = true;
 
             if (!isMobile) {
-                this.moonCtrl.on("pointerover", function() {
+                this.moonCtrl.on("pointerover", function () {
                     eclipse.show();
                     _this2.$front.addClass('over');
                 });
 
-                this.moonCtrl.on("pointerout", function() {
+                this.moonCtrl.on("pointerout", function () {
                     _this2.$front.removeClass('over');
                     eclipse.hide();
                 });
 
-                this.moonCtrl.on("pointerdown", function() {
+                this.moonCtrl.on("pointerdown", function () {
                     // board.isShow = true
                     // board.update()
                     board.open();
                 });
             } else {
-                this.moonCtrl.on("pointerdown", function(e) {
+                this.moonCtrl.on("pointerdown", function (e) {
                     eclipse.show();
                     board.open();
                 });
@@ -819,7 +800,7 @@ var Earth = function() {
                 }
             }
 
-            this.back.ticker.add(function(deltaTime) {
+            this.back.ticker.add(function (deltaTime) {
                 hasStats && stats.begin();
                 _this3.fps = 60 / deltaTime;
                 _this3.loop();
@@ -857,7 +838,7 @@ var Earth = function() {
         value: function listenEvent() {
             var _this4 = this;
 
-            PubSub.subscribe('resize', function(msg, data) {
+            PubSub.subscribe('resize', function (msg, data) {
                 _this4.front.renderer.view.style.transform = data.css;
                 _this4.back.renderer.view.style.transform = data.css;
             });
@@ -867,7 +848,7 @@ var Earth = function() {
     return Earth;
 }();
 
-var Star = function() {
+var Star = function () {
     function Star() {
         _classCallCheck(this, Star);
 
@@ -938,7 +919,7 @@ var Star = function() {
     return Star;
 }();
 
-var Board = function() {
+var Board = function () {
     function Board() {
         _classCallCheck(this, Board);
 
@@ -975,8 +956,7 @@ var Board = function() {
             //         tran: this.loader.load('images/tran.png'),
             //     }
             // }
-        };
-        this.uniforms = {
+        };this.uniforms = {
             uvScale: {
                 type: 'vec2',
                 value: [1, 1]
@@ -1012,8 +992,7 @@ var Board = function() {
             // uniforms.iChannel0.value.wrapS = uniforms.iChannel0.value.wrapT = THREE.RepeatWrapping
             // uniforms.iChannel1.value.wrapS = uniforms.iChannel1.value.wrapT = THREE.RepeatWrapping
 
-        };
-        this.vertexShader = "\nvarying vec2 vUv;\nvoid main() { \n    vUv = uv;\n    vec4 mvPosition = modelViewMatrix * vec4( position, 1.0 );\n    gl_Position = projectionMatrix * mvPosition;\n}";
+        };this.vertexShader = "\nvarying vec2 vUv;\nvoid main() { \n    vUv = uv;\n    vec4 mvPosition = modelViewMatrix * vec4( position, 1.0 );\n    gl_Position = projectionMatrix * mvPosition;\n}";
 
         this.fragmentShader = "\nprecision highp float;\nprecision highp int;\n\nvarying vec2 vUv;\n\nuniform vec2 uvScale;\nuniform sampler2D iChannel0;\nuniform sampler2D iChannel1;\nuniform float speed;\nuniform float frequency;\nuniform float amplitude;\nuniform float time;\n\nvoid main() {\n    vec2 ripple = vec2(\n        // - 0.5 to center the ripple in the middle of image\n        sin(  (length( vUv - 0.5 ) * frequency ) + ( time * speed ) ),\n        cos( ( length( vUv - 0.5 ) * frequency ) + ( time * speed ) )\n    // Scale amplitude to make input more convenient for users\n    ) * ( amplitude / 1000.0 );\n    \n    // mix the two images together based on time. the second image ripple's\n    // strength is 1 - percent to make it end on non-ripple\n    \n    // float percent = 0.5 + 0.5 * sin( time );\n    float percent = sin(time);\n    gl_FragColor = mix(\n        texture2D( iChannel0, vUv + ripple * percent ),\n        texture2D( iChannel1, vUv + ripple * ( 1.0 - percent ) ),\n        percent\n    );\n}";
 
@@ -1183,7 +1162,7 @@ var Board = function() {
             this.opening = false;
             this.cur = null;
             this.slide();
-            setTimeout(function() {
+            setTimeout(function () {
                 _this6.renderer.domElement.style.display = 'none';
             }, this.duration.value * 1000);
         }
@@ -1218,7 +1197,7 @@ var Board = function() {
         value: function listenEvent() {
             var _this7 = this;
 
-            PubSub.subscribe('resize', function(msg, data) {
+            PubSub.subscribe('resize', function (msg, data) {
                 _this7.renderer.setSize(winW, winH);
                 _this7.camera.aspect = winW / winH;
                 if (winH > winW) {
@@ -1234,7 +1213,7 @@ var Board = function() {
             var delta = 0.5;
             var intersects = void 0;
 
-            document.body.addEventListener('mousemove', function(e) {
+            document.body.addEventListener('mousemove', function (e) {
                 _this7.mouse.x = e.clientX / _this7.renderer.domElement.clientWidth * 2 - 1;
                 _this7.mouse.y = -(e.clientY / _this7.renderer.domElement.clientHeight) * 2 + 1;
 
@@ -1253,7 +1232,7 @@ var Board = function() {
                             break;
                         case 'github':
                         case 'codepen':
-                            // case 'openprocessing':
+                        // case 'openprocessing':
                         case 'mail':
                             if (_this7.cur === 3) {
                                 // $body.css('cursor', 'pointer');
@@ -1277,7 +1256,7 @@ var Board = function() {
                 });
             });
 
-            document.body.addEventListener('mousedown', function(e) {
+            document.body.addEventListener('mousedown', function (e) {
                 if (_this7.playing) return;
 
                 if (intersects.length > 0) {
@@ -1326,7 +1305,7 @@ var Board = function() {
     return Board;
 }();
 
-var Sound = function() {
+var Sound = function () {
     function Sound() {
         _classCallCheck(this, Sound);
 
@@ -1348,7 +1327,7 @@ var Sound = function() {
         value: function bindEvent() {
             var _this8 = this;
 
-            this.$volume.on('click', function(e) {
+            this.$volume.on('click', function (e) {
                 if (_this8.playing) {
                     _this8.sound.stop();
                     _this8.playing = false;
@@ -1368,7 +1347,7 @@ var Sound = function() {
     return Sound;
 }();
 
-var Message = function() {
+var Message = function () {
     function Message() {
         var _this9 = this;
 
@@ -1377,7 +1356,7 @@ var Message = function() {
         this.$msg = $('.message');
         this.$fps = $('#fps');
 
-        this.$msg.find('.message-close').on('click', function(e) {
+        this.$msg.find('.message-close').on('click', function (e) {
             _this9.$msg.hide();
         });
     }
@@ -1389,7 +1368,7 @@ var Message = function() {
 
             this.$fps.text(averFps);
             this.$msg.show();
-            setTimeout(function() {
+            setTimeout(function () {
                 _this10.$msg.fadeOut(1000);
             }, 15000);
         }
