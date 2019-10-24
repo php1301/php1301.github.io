@@ -20,7 +20,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 console.clear();
 PIXI.utils.skipHello();
 
-var msg = "\n.::::    .::\n  .::  .::  \n  .::  .::  \n  .::.::    \n  .::  .::  \n  .::  .::  \n.::::    .::\n\nHi, glad to see you here.\nAre you a Web dev? \nMay I know any of your contact method?\nMy Github, Codepen, LinkedIn & Email are in the last slide.\nIf possible, let's keep in touch!\n\nKelvin\n";
+var msg = "\n.::::    .::\n  .::  .::  \n  .::  .::  \n  .::.::    \n  .::  .::  \n  .::  .::  \n.::::    .::\n\nHi, glad to see you here.\nAre you a Web dev? \nMay I know any of your contact method?\nMy Github, Codepen, LinkedIn & Email are in the last slide.\nIf possible, let's keep in touch!\n\nPhuc\n";
 console.log(msg);
 
 var stats = void 0,
