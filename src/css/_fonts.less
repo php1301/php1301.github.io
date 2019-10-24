@@ -1,0 +1,97 @@
+@icomoon-font-path: "../fonts";
+
+@icon-volume-high: "\ea26";
+@icon-volume-medium: "\ea27";
+@icon-volume-mute: "\ea29";
+@icon-volume-mute2: "\ea2a";
+@icon-share: "\e900";
+@icon-google-plus: "\ea8b";
+@icon-facebook: "\ea90";
+@icon-twitter: "\ea96";
+@icon-linkedin: "\eaca";
+@icon-pinterest: "\ead1";
+
+@font-face {
+  font-family: 'kv';
+  src : url('@{icomoon-font-path}/kv.eot?6qtwia');
+  src : url('@{icomoon-font-path}/kv.eot?6qtwia#iefix') format('embedded-opentype'),
+  url('@{icomoon-font-path}/kv.ttf?6qtwia') format('truetype'),
+  url('@{icomoon-font-path}/kv.woff?6qtwia') format('woff'),
+  url('@{icomoon-font-path}/kv.svg?6qtwia#kv') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+.icon {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'kv' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-volume-high {
+  &:before {
+    content: @icon-volume-high;
+  }
+}
+
+.icon-volume-medium {
+  &:before {
+    content: @icon-volume-medium;
+  }
+}
+
+.icon-volume-mute {
+  &:before {
+    content: @icon-volume-mute;
+  }
+}
+
+.icon-volume-mute2 {
+  &:before {
+    content: @icon-volume-mute2;
+  }
+}
+
+.icon-share {
+  &:before {
+    content: @icon-share;
+  }
+}
+
+.icon-google-plus {
+  &:before {
+    content: @icon-google-plus;
+  }
+}
+
+.icon-facebook {
+  &:before {
+    content: @icon-facebook;
+  }
+}
+
+.icon-twitter {
+  &:before {
+    content: @icon-twitter;
+  }
+}
+
+.icon-linkedin {
+  &:before {
+    content: @icon-linkedin;
+  }
+}
+
+.icon-pinterest {
+  &:before {
+    content: @icon-pinterest;
+  }
+}

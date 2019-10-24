@@ -1,0 +1,244 @@
+@import url('https://fonts.googleapis.com/css?family=Merriweather');
+@import '_lesshat';
+@import '_fonts';
+@d: .4s;
+@blue: #908dff;
+html,
+body {
+    background: black;
+    // cursor: url("../images/cursor_auto.png") 18 18, url("../images/cursor_auto.cur") 18 18, auto !important;
+    font-family: 'Merriweather', serif;
+    overflow: hidden;
+    height: 100%;
+    min-width: 400px;
+}
+
+a {
+    // cursor: url("../images/cursor_hand.png") 20 12, url("../images/cursor_hand.cur") 20 12, pointer !important;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.invisible {
+    position: absolute !important;
+    clip: rect(1px 1px 1px 1px);
+    clip: rect(1px, 1px, 1px, 1px);
+    overflow: hidden;
+    height: 1px;
+}
+
+#app-back,
+#app-front,
+#loading {
+    transition: transform .1s;
+    transform-origin: left top;
+    transform: translateX(-50%);
+    left: 50%;
+    &.over {
+        // cursor: url("../images/cursor_hand.png") 27 16, url("../images/cursor_hand.cur") 27 16, pointer !important;
+        cursor: pointer;
+    }
+}
+
+#loading {
+    position: fixed;
+    width: 2016px;
+    height: 864px;
+    top: 0;
+    z-index: 100;
+    background: black;
+    // display: none !important;
+}
+
+#loading-inner {
+    opacity: 0;
+}
+
+#dark,
+#light {
+    border-radius: 50%;
+    position: absolute;
+    left: 50%;
+}
+
+#dark {
+    width: 428px;
+    height: 428px;
+    top: 154px;
+    margin-left: -214px;
+    background: black;
+    z-index: 15;
+}
+
+#light {
+    width: 640px;
+    height: 640px;
+    background: url('../images/eclipselight.png') no-repeat center center;
+    background-size: contain;
+    z-index: 10;
+    top: 46px;
+    margin-left: -320px;
+}
+
+#percent {
+    width: 500px;
+    margin: 0 auto;
+    padding-top: 674px;
+    color: white;
+    font-size: 24px;
+    line-height: 32px;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+#app-back {
+    position: fixed;
+    z-index: 1;
+    margin: 0 auto;
+}
+
+#app-front {
+    position: fixed;
+    z-index: 2;
+    margin: 0 auto;
+}
+
+#stats,
+#gui {
+    position: fixed;
+    z-index: 10;
+    top: 0;
+}
+
+#stats {
+    left: 0;
+}
+
+#gui {
+    right: 0;
+}
+
+#board {
+    transform-style: preserve-3d;
+    margin: 0 auto;
+    width: 800px;
+    height: 600px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 5;
+    margin: auto;
+    &.over {
+        // cursor: url("../images/cursor_hand.png") 27 16, url("../images/cursor_hand.cur") 27 16, pointer !important;
+        cursor: pointer;
+    }
+}
+
+#btns {
+    position: fixed;
+    right: 20px;
+    bottom: 12px;
+    z-index: 9;
+    white-space: nowrap;
+    a {
+        .icon;
+        color: white;
+        display: inline-block;
+        vertical-align: middle;
+        font-size: 16px;
+        line-height: 24px;
+        overflow: hidden;
+        width: 24px;
+        text-align: center;
+        .transition(all @d);
+        &:hover {
+            color: @blue;
+        }
+    }
+    #sns {
+        display: inline-block;
+        .sns-icon {
+            width: 0;
+            opacity: 0;
+        }
+        &:hover {
+            .sns-icon {
+                width: 24px;
+                opacity: 1;
+            }
+        }
+    }
+    #share {
+        .icon-share;
+        width: 24px;
+        opacity: 1;
+    }
+    #facebook {
+        .icon-facebook;
+    }
+    #twitter {
+        .icon-twitter;
+    }
+    #linkedin {
+        .icon-linkedin;
+    }
+    #google-plus {
+        .icon-google-plus;
+    }
+    #pinterest {
+        .icon-pinterest;
+    }
+    #volume {
+        margin-left: 10px;
+        .icon-volume-high;
+        &.stopped {
+            .icon-volume-mute;
+        }
+    }
+}
+
+.message {
+    position: fixed;
+    left: 30px;
+    bottom: 30px;
+    right: 30px;
+    z-index: 20;
+    max-width: 500px;
+    padding: 30px;
+    font-size: 16px;
+    line-height: 27px;
+    color: white;
+    background: fade(black, 70%);
+    p {
+        margin-bottom: 10px;
+    }
+    .message-close {
+        display: inline-block;
+        padding-top: 10px;
+        text-align: center;
+        text-decoration: underline;
+        font-weight: bold;
+        color: @blue;
+    }
+    @media (max-width: 600px) {
+        font-size: 14px;
+        line-height: 22px;
+    }
+}
+
+#msg-slow {
+    display: none;
+}
+
+#testing {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 8;
+    background: #000;
+    display: none;
+}
