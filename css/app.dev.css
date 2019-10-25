@@ -361,6 +361,7 @@ section {
 
 section {
     padding: 3rem;
+    padding-bottom: 0;
 }
 
 .typed-cursor {
