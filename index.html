@@ -8,10 +8,10 @@
 <meta content="Phuc Pham" name=author>
 <meta content="width=device-width,initial-scale=1,maximum-scale=1,minimum-scale=1,user-scalable=0" name=viewport>
 <link href=/apple-touch-icon.png rel=apple-touch-icon sizes=180x180>
-<link href=/favicon-32x32.png rel=icon sizes=32x32 type=image/png>
-<link href=/favicon-16x16.png rel=icon sizes=16x16 type=image/png>
-<link href="./manifest.json" rel=manifest>
+<link href=/favicon-32x32.png rel=icon sizes=32x32 type=image/png> <link href=/favicon-16x16.png rel=icon sizes=16x16
+    type=image/png> <link href="./manifest.json" rel=manifest>
 <link href="/safari-pinned-tab.svg" rel=mask-icon color=#5bbad5>
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 <meta content=#080d2a name=theme-color>
 <meta content=profile property=og:type>
 <meta content="PhucPham's Portfolio" property=og:title>
@@ -28,41 +28,87 @@
 <link href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css" rel=stylesheet>
 <link href="css/app.dev.css" rel=stylesheet>
 
-<body class=""><a class=opl href="#" target=_blank><img height=56 src=https://s3.amazonaws.com/onepagelove/one-page-love-award-retina-left.png srcset="https://s3.amazonaws.com/onepagelove/one-page-love-award-left.png, https://s3.amazonaws.com/onepagelove/one-page-love-award-retina-left.png 2x"width=73></a>
-    <div
-        id=loading>
+<body class="">
+    <div id=loading>
         <div id=loading-inner>
-            <div id=dark></div>
-            <div id=light></div>
+            <div id=dark>
+            </div>
+            <div id=light>
+            </div>
             <div id=percent>Loading</div>
         </div>
-        </div>
-        <div id=testing></div>
-        <div id=btns>
-            <div id=sns><a class="sns-icon sharer" id=facebook title="Share to Facebook" data-sharer=facebook data-url=https://agitated-stonebraker-b659c6.netlify.com/></a> <a class="sns-icon sharer" id=twitter title="Share to Twitter" data-sharer=twitter data-url=https://agitated-stonebraker-b659c6.netlify.com/ data-title="PhucPham's portfolio site"></a>                <a class="sns-icon sharer" id=linkedin title="Share to LinkedIn" data-sharer=linkedin data-url=https://agitated-stonebraker-b659c6.netlify.com//></a> <a class="sns-icon sharer" id=google-plus title="Share to Google Plus" data-sharer=googleplus data-url=https://agitated-stonebraker-b659c6.netlify.com/></a>                <a class=sns-icon id=pinterest title="Share to Pinterest"></a> <a id=share></a></div><a id=volume title="Music On/Off"></a></div>
-        <div id=msg-slow class=message>
-            <article>
-                <p>Your device can only display this page at about <span id=fps></span>fps (frames-per-second), which can be 60fps (Max) on a computer with intermediate display card, or any modern mobile device.
-                    <p>Please use another faster device to get smoother experience.
-                        <p>Also, please avoid using IE due to its terrible performance.</article><a class=message-close>Close</a></div>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/bowser/1.7.3/bowser.min.js"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.4/lodash.min.js"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.1/js/swiper.min.js"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/87/three.min.js"></script>
-        <script type="text/javascript" src="./lib/OrbitControls.js"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.19.1/TweenMax.min.js"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.19.1/plugins/CSSPlugin.min.js"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.19.1/plugins/ColorPropsPlugin.min.js"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/stats.js/r16/Stats.min.js"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/pixi.js/4.5.1/pixi.min.js"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/pixi-filters/1.0.6/filters.min.js"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/pubsub-js/1.5.7/pubsub.min.js"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/sharer.js/0.3.1/sharer.min.js"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/dat-gui/0.6.5/dat.gui.min.js"></script>
-        <script type="text/javascript" src="./lib/pixi-extra-filters.min.js"></script>
-        <script type="text/javascript" src="./lib/pixi-display.js"></script>
-        <script type="text/javascript" src="./lib/PixiPlugin.min.js"></script>
-        <script src="./node_modules/pixi-sound/dist/pixi-sound.js"></script>
-        <script src="https://www.googletagmanager.com/gtag/js?id=UA-107422840-1" async></script>
-        <script type="text/javascript" src="js/app.dev.js"></script>
+    </div>
+    <div id=testing></div>
+    <div id=btns>
+        <div id=sns><a onclick="setString(this)" class="sns-icon sharer1" id=facebook title="Share to Facebook"
+                data-url=https://agitated-stonebraker-b659c6.netlify.com> </a> <a onclick="setString1(this)"
+                class="sns-icon sharer2" id=twitter title="Share to Twitter"
+                data-url=https://agitated-stonebraker-b659c6.netlify.com data-title="PhucPham's portfolio site"></a> <a
+                onclick="setString2(this)" class="sns-icon sharer3" id=linkedin title="Share to LinkedIn"
+                data-url=https://agitated-stonebraker-b659c6.netlify.com </a> <a onclick="setString3(this)"
+                class="sns-icon sharer4" id=google-plus title="Share to Google Plus"
+                data-url=https://agitated-stonebraker-b659c6.netlify.com> </a> <a id=share></a></div><a id=volume
+            title="Music On/Off"></a>
+    </div>
+    <section class="quote">
+        <blockquote class="electric bubble"></blockquote>
+    </section>
+    <section class="quote">
+        <blockquote class="whisper bubble">
+        </blockquote>
+    </section>
+    <!-- <div class="sub-menu" id="dropDownMenu" style="background-color: red">
+        <ul id="navbar">
+            <li style="color: white;"> First</li>
+            <li style="color: white;"> First</li>
+            <li style="color: white;"> First</li>
+            <li style="color: white;"> First</li>
+            <li style="color: white;"> First</li>
+        </ul>
+    </div>
+    <button id="circleMenuBtn">click</button> -->
+    <!-- <section class="icon">
+        <a href="https://www.facebook.com/dioxittdn.phucprobb"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+    </section> -->
+    <div id=msg-slow class=message>
+        <article>
+            <p>Maybe a little laggy base on your fps<span id=fps></span>
+                <p>Check the arrow button to find out more about me :)
+                    <p>Also, please avoid using IE due to its terrible performance.
+        </article><a class=message-close>Close</a>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bowser/1.7.3/bowser.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.4.1.js"
+        integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.4/lodash.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.1/js/swiper.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/87/three.min.js"></script>
+    <script type="text/javascript" src="./lib/OrbitControls.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.19.1/TweenMax.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.19.1/plugins/CSSPlugin.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.19.1/plugins/ColorPropsPlugin.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/stats.js/r16/Stats.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pixi.js/4.5.1/pixi.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pixi-filters/1.0.6/filters.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pubsub-js/1.5.7/pubsub.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/sharer.js/0.3.1/sharer.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/dat-gui/0.6.5/dat.gui.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/typeit@VERSION_NUMBER/dist/typeit.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/1.1.7/typed.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/jquery.waypoints.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"
+        integrity="sha256-T0Vest3yCU7pafRw9r+settMBX6JkKN06dqBnpQ8d30=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/web-animations/2.2.2/web-animations.min.js"></script>
+    <script type="text/javascript" src="./lib/pixi-extra-filters.min.js"></script>
+    <script type="text/javascript" src="./lib/pixi-display.js"></script>
+    <script type="text/javascript" src="./lib/PixiPlugin.min.js"></script>
+    <script type="text/javascript" src="/js/text.js"></script>
+    <script type="text/javascript" src="/js/text2.js"></script>
+    <script src="./node_modules/pixi-sound/dist/pixi-sound.js"></script>
+    <script src="https://www.googletagmanager.com/gtag/js?id=UA-107422840-1" async></script>
+    <script type="text/javascript" src="js/app.dev.js"></script>
