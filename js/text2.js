@@ -18,7 +18,7 @@ function setString2(arg){
     console.log("ok");
     var a=arg.innerHTML;
     Typed.new(".electric", {
-        strings:  [ "Want to contach with me and check out my Projects? Click icon toggle and Check below! Details call 0888700140"],
+        strings:  [ "Want to contact with me and check out my Projects? Click icon toggle and Check below! Details call 0888700140"],
         typeSpeed: 2
     });
 }   
