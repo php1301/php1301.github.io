@@ -325,7 +325,7 @@ function checkFps() {
 function initShare() {
     $('#pinterest').on('click', function (e) {
         e.preventDefault();
-        var url = "http://pinterest.com/pin/create/button/?url=http%3A%2F%2Fkelvinh.studio&media=http%3A%2F%2Fkelvinh.studio%2Fimages%2Fcapture_1024.jpg&description=Kelvin%20Hung's%20portfolio";
+        var url = "";
         var setting = 'toolbar=no, location=no, status=no, menubar=no, scrollbars=yes, resizable=yes, width=800, height=680';
 
         window.open(url, 'targetWindow', setting);
@@ -1274,10 +1274,10 @@ var Board = function () {
                             }
                             break;
                         case 'github':
-                            if (_this7.cur === 3) window.open('https://github.com/kelvinh111', '_blank');
+                            if (_this7.cur === 3) window.open('');
                             break;
                         case 'codepen':
-                            if (_this7.cur === 3) window.open('https://codepen.io/kelvinh111/', '_blank');
+                            if (_this7.cur === 3) window.open('');
                             break;
                         case 'linkedin':
                             // if (this.cur === 3)
@@ -1287,7 +1287,7 @@ var Board = function () {
                             if (_this7.cur === 3) {
                                 var mailSubject = '';
                                 var mailBody = '';
-                                window.location.href = 'mailto:kelvinhung.general@gmail.com';
+                                window.location.href = '';
                             }
                             break;
                     }
