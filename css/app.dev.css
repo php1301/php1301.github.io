@@ -525,7 +525,7 @@ blockquote.electric {
     section:nth-of-type(1) {
         position: absolute;
         z-index: 3000;
-        top: 21%;
+        top: 18%;
         left: 33%;
     }
 }
