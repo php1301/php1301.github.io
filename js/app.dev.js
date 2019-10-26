@@ -1311,7 +1311,7 @@ var Sound = function () {
 
         this.sound = PIXI.loader.resources[assets.bgm].sound;
         this.playing = true;
-        this.$volume = $('#volume');
+        this.$volume = $('.icon-volume-medium');
 
         this.sound.volume = 0.3;
         this.sound.play({

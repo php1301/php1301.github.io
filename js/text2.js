@@ -18,7 +18,7 @@ function setString2(arg){
     console.log("ok");
     var a=arg.innerHTML;
     Typed.new(".electric", {
-        strings:  [ "Amsterdam.", "Full Service.", "Webdevelopment.", "Wij zijn Occhio!"],
+        strings:  [ "Interested in working with me and check out my Projects? Check below! Details call 0888700140"],
         typeSpeed: 2
     });
 }   
@@ -26,7 +26,7 @@ function setString3(arg){
     console.log("ok");
     var a=arg.innerHTML;
     Typed.new(".electric", {
-        strings:  [ "Amsterdam.", "Full Service.", "Webdevelopment.", "Wij zijn Occhio!"],
+        strings:  [ "I hope for the fact that you would be satified", "After checking out all above informations", "I also want to hang out often, too :)", "Let me an opportunity to join your companion"],
         typeSpeed: 2
     });
 }   
