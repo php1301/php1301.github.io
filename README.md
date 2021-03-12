@@ -4,4 +4,3 @@
 ---
 ANY CLONES ARE JUST CLONES AFTERWARDS
 ---
-[Author](https://www.facebook.com/dioxittdn.phucprobb)
